@@ -14,6 +14,7 @@ def hello():
 
 @app.route("/form1", methods=["GET", "POST"])
 def index():
+    form = InputForm(request.form)
     if request.method == "POST":
         r = form.r.data
         s = compute(r)
